@@ -21,7 +21,7 @@ defmodule Dashboard.Web.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Dashboard.Web.Application, []},
-     extra_applications: [:logger, :runtime_tools]]
+     extra_applications: [:logger, :runtime_tools, :httpoison]]
   end
 
   # Specifies which paths to compile per environment.
@@ -40,7 +40,8 @@ defmodule Dashboard.Web.Mixfile do
      {:gettext, "~> 0.11"},
      {:dashboard, in_umbrella: true},
      {:cowboy, "~> 1.0"},
-     {:terraform, git: "https://github.com/azranel/terraform", branch: "allow_phoenix_1.3.0"}
+     {:terraform, git: "https://github.com/azranel/terraform", branch: "allow_phoenix_1.3.0"},
+     {:httpoison, "~> 0.11.1"}
    ]
   end
 
