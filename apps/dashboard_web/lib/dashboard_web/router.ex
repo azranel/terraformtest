@@ -1,5 +1,6 @@
 defmodule Dashboard.Web.Router do
   use Dashboard.Web, :router
+  use Terraform, terraformer: Dashboard.Web.Terraformers.Rails
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -17,6 +18,9 @@ defmodule Dashboard.Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/foo", PageController, :index
+    get "/bar", PageController, :index
+    get "/baz", PageController, :index
   end
 
   # Other scopes may use custom stacks.
