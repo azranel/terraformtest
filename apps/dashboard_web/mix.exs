@@ -37,9 +37,11 @@ defmodule Dashboard.Web.Mixfile do
      {:phoenix_ecto, "~> 3.2"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:gettext, "~> 0.11"}, 
-     {:dashboard, in_umbrella: true}, 
-     {:cowboy, "~> 1.0"}]
+     {:gettext, "~> 0.11"},
+     {:dashboard, in_umbrella: true},
+     {:cowboy, "~> 1.0"},
+     {:terraform, git: "https://github.com/azranel/terraform", branch: "allow_phoenix_1.3.0"}
+   ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
